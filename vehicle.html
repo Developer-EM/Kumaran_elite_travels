@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Vehicle Fleet | Kumaran Elite Travels Trichy</title>
+ <link rel="shortcut icon" href="assets/kumaran_logo.png" type="image/x-icon">
+<!-- SEO Meta Tags -->
+ <meta name="description" content="Explore the premium vehicle fleet of Kumaran Elite Travels in Trichy including hatchback, SUV and Innova taxi services for airport transfers, outstation trips and family travel.">
+
+<meta name="keywords" content="Taxi Fleet Trichy, Kumaran Elite Travels, SUV Taxi Trichy, Innova Taxi Trichy, Hatchback Taxi Service, Outstation Taxi Trichy">
+
+<meta name="robots" content="index, follow">
+
+<meta name="author" content="Kumaran Elite Travels">
+
+<link rel="canonical" href="https://kumaranelitetravels.in/vehicle.html">
+
+<meta property="og:title" content="Vehicle Fleet | Kumaran Elite Travels">
+
+<meta property="og:description" content="Choose from premium taxi vehicles including SUV, Innova and hatchback cars in Trichy.">
+
+<meta property="og:type" content="website">
+
+<meta property="og:url" content="https://kumaranelitetravels.in/vehicle.html">
+
+<meta property="og:image" content="https://kumaranelitetravels.in/assets/kumaran_logo.png">
+
+<meta name="twitter:card" content="summary_large_image">
+
+<meta name="twitter:title" content="Vehicle Fleet | Kumaran Elite Travels">
+
+<meta name="twitter:description" content="Premium taxi fleet in Trichy with hatchback, SUV and Innova travel options.">
+
+<meta name="twitter:image" content="https://kumaranelitetravels.in/assets/kumaran_logo.png">
+
+
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+
+/* ===== HERO ===== */
+
+
+.fleet-hero{
+margin-top:80px;
+min-height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:var(--bg);
+position:relative;   /* IMPORTANT */
+overflow:hidden;
+}
+
+.fleet-hero-container{
+max-width:900px;
+margin:auto;
+position:relative;
+z-index:10; /* content above background */
+}
+
+.hero-booking-bg{   
+position:absolute;
+inset:0;
+z-index:0;
+background:
+radial-gradient(ellipse 80% 60% at 70% 50%,rgba(230,57,70,0.12),transparent 70%),
+radial-gradient(ellipse 50% 80% at 20% 30%,rgba(230,57,70,0.06),transparent 60%),
+linear-gradient(180deg,var(--bg),var(--bg2));
+}
+
+.hero-booking-grid{
+position:absolute;
+inset:0;
+z-index:0;
+background-image:
+linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),
+linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);
+background-size:60px 60px;
+}
+
+/* ===== FLEET GRID ===== */
+
+.fleet-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:28px;
+margin-top:60px;
+}
+
+
+/* ===== FLEET CARD ===== */
+
+.fleet-card{
+background:var(--bg3);
+border:none;
+border-radius:24px;
+padding:24px;
+transition:all .35s ease;
+position:relative;
+overflow:hidden;
+}
+
+.fleet-card:hover{
+transform:translateY(0px);
+box-shadow: 0 24px 60px rgba(0, 0, 0, 0);;
+border:none ;
+}
+
+
+/* ===== CAR IMAGE ===== */
+
+.fleer-image{
+display:flex;
+justify-content:center;
+margin-bottom:20px;
+}
+
+.fleet-image img{
+width:350px;
+height:auto;
+}
+
+
+/* ===== VEHICLE TEXT ===== */
+
+.fleet-type{
+font-size:11px;
+color:var(--red);
+font-weight:700;
+letter-spacing:2px;
+text-transform:uppercase;
+margin-bottom:6px;
+}
+.journey-cta{
+  background:var(--bg2);
+  border-radius:40px;
+  padding:64px 48px;
+  text-align:center;
+  border:1px solid var(--glass-border);
+  margin-top:40px;
+}
+
+.journey-cta h2{
+  font-family:'Sora',sans-serif;
+  font-size:clamp(32px,5vw,44px);
+  font-weight:700;
+  margin-bottom:16px;
+}
+
+
+.journey-cta .phone-number{
+  font-size:32px;
+  font-weight:700;
+  color:var(--red);
+  letter-spacing:-0.5px;
+  margin:20px 0 24px;
+}
+
+
+.fleet-name{
+font-family:'Sora',sans-serif;
+font-size:24px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.fleet-desc{
+font-size:14px;
+color:var(--white-70);
+margin-bottom:16px;
+}
+
+
+/* ===== SPECS ===== */
+
+.spec-row{
+display:flex;
+gap:18px;
+margin-bottom:16px;
+padding:10px 14px;
+background:rgba(255,255,255,0.02);
+border-radius:14px;
+}
+
+.spec-item{
+font-size:14px;
+color:var(--white-70);
+display:flex;
+align-items:center;
+gap:6px;
+}
+
+.spec-item i{
+color:var(--red);
+}
+
+
+/* ===== FEATURES ===== */
+
+.features-list li{
+font-size:13px;
+color:var(--white-70);
+padding:3px 0;
+}
+
+
+/* ===== BOOK BUTTON ===== */
+
+.book-btn{
+margin-top:16px;
+width:100%;
+border:1px solid var(--red);
+padding:12px;
+border-radius:30px;
+font-weight:600;
+background:transparent;
+color:#fff;
+cursor:pointer;
+transition:all .3s;
+}
+
+.book-btn:hover{
+background:var(--red);
+box-shadow:0 8px 24px var(--red-glow);
+}
+
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:1024px){
+
+.fleet-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:768px){
+
+.fleet-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ===== NAVBAR (reuse homepage navbar) ===== -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">
+    <i class="fas fa-taxi" style="color: var(--red); font-size: 24px;"></i>
+    <div class="nav-logo-text">
+      <div class="brand">Kumaran Elite</div>
+      <div class="sub"> Travels</div>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="index.html#services">Services</a>
+    <a href="index.html#destinations">Destinations</a>
+    <a href="vehicle.html">Vehicle</a>
+    <a href="about.html">About</a>
+    <a href="package.html">Package</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+  <a href="book.html" class="nav-cta">Book Now</a>
+  <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true">
+  <button class="close-menu" id="closeMenu" aria-label="Close menu">✕</button>
+  <a href="index.html#services" onclick="closeMobileMenu()">Services</a>
+  <a href="index.html#destinations" onclick="closeMobileMenu()">Destinations</a>
+  <a href="#" onclick="closeMobileMenu()">Vehicle</a>
+  <a href="about.html" onclick="closeMobileMenu()">About</a>
+  <a href="package.html" onclick="closeMobileMenu()">Package</a>
+  <a href="index.html#contact" onclick="closeMobileMenu()">Contact</a>
+  <a href="book.html" class="btn-primary" style="font-size:16px;">Book Now</a>
+</div>
+
+
+
+<!-- ===== HERO ===== -->
+<section class="fleet-hero">
+
+<div class="hero-booking-bg"></div>
+<div class="hero-booking-grid"></div>
+
+<div class="fleet-hero-container">
+
+<div class="section-label" style="justify-content:center;">Premium Fleet</div>
+
+<h1 class="section-title">Our Vehicle Fleet</h1>
+
+<p class="section-sub" style="margin:auto;">
+Choose from our wide range of well-maintained vehicles. Travel comfortably anywhere in Tamil Nadu with Kumaran Elite Travels.
+</p><br>
+
+<div class="hero-buttons">
+<a href="book.html" class="btn-primary" style="margin-bottom: 10px;">Book Taxi</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://wa.me/918940262025?text=Hi%20Kumaran%20Elite%20Travels%2C%20I%20need%20to%20book%20a%20taxi%20from%20Trichy." target="_blank" class="btn-whatsapp">
+<i class="fab fa-whatsapp"></i> Contact Us
+</a>
+</div>
+
+</div>
+
+</section>
+
+<!-- ===== FLEET ===== -->
+
+<section id="fleet">
+
+<div style="text-align:center">
+
+<div class="section-label" style="justify-content:center;">Our Vehicles</div>
+
+<h2 class="section-title">Choose Your Ride</h2>
+
+</div>
+
+
+<div class="fleet-grid">
+
+
+<!-- Swift -->
+
+<div class="fleet-card">
+
+<div class="fleet-image">
+<img src="assets/swift.png">
+</div>
+
+<div class="fleet-type">Hatchback</div>
+
+<div class="fleet-name">Maruti Swift</div>
+
+<p class="fleet-desc">
+Compact and fuel-efficient vehicle perfect for city and short outstation travel.
+</p>
+
+<div class="spec-row">
+
+<span class="spec-item"><i class="fas fa-user"></i> 5 Seats</span>
+
+<span class="spec-item"><i class="fas fa-suitcase"></i> 3 Bags</span>
+
+</div>
+
+<ul class="features-list">
+
+<li>Comfort seating</li>
+<li>AC vehicle</li>
+<li>Perfect for city rides</li>
+
+</ul>
+<br>
+<a class="book-btn" href="https://wa.me/918940262025?text=Hello%20Kumaran%20Elite%20Travels,%20I%E2%80%99d%20like%20to%20check%20the%20availability%20of%20a%20*Hatchback%20(Maruti%20Swift)*%20for%20my%20trip.%20Please%20share%20the%20availability%20and%20fare%20details." target="_blank">
+Book Maruti Swift
+</a>
+
+</div>
+
+
+
+<!-- XUV -->
+
+<div class="fleet-card">
+
+<div class="fleet-image">
+<img src="assets/xuv.png">
+</div>
+
+<div class="fleet-type">SUV</div>
+
+<div class="fleet-name">Mahindra XUV700</div>
+
+<p class="fleet-desc">
+Premium SUV with powerful performance and spacious interiors for long journeys.
+</p>
+
+<div class="spec-row">
+
+<span class="spec-item"><i class="fas fa-user"></i> 7 Seats</span>
+
+<span class="spec-item"><i class="fas fa-suitcase"></i> 5 Bags</span>
+
+</div>
+
+<ul class="features-list">
+
+<li>Luxury seating</li>
+<li>Spacious cabin</li>
+<li>Perfect for family trips</li>
+
+</ul>
+
+<br>
+<a class="book-btn" href="https://wa.me/918940262025?text=Hello%20Kumaran%20Elite%20Travels,%20I%E2%80%99d%20like%20to%20check%20the%20availability%20of%20a%20*SUV%20(Mahindra%20XUV700)*%20for%20my%20trip.%20Please%20share%20the%20availability%20and%20fare%20details." target="_blank">
+Book Mahindra XUV700
+</a>
+
+</div>
+
+
+
+<!-- Innova -->
+
+<div class="fleet-card">
+
+<div class="fleet-image">
+<img src="assets/hycross.png">
+</div>
+
+<div class="fleet-type">MPV</div>
+
+<div class="fleet-name">Toyota Innova Hycross</div>
+
+<p class="fleet-desc">
+Premium MPV offering ultimate comfort for long distance family travel.
+</p>
+
+<div class="spec-row">
+
+<span class="spec-item"><i class="fas fa-user"></i> 7 Seats</span>
+
+<span class="spec-item"><i class="fas fa-suitcase"></i> 6 Bags</span>
+
+</div>
+
+<ul class="features-list">
+
+<li>Luxury interiors</li>
+<li>Large luggage space</li>
+<li>Best for long trips</li>
+
+</ul><br>
+
+<a class="book-btn" href="https://wa.me/918940262025?text=Hello%20Kumaran%20Elite%20Travels,%20I%E2%80%99d%20like%20to%20check%20the%20availability%20of%20a%20*MPV%20(Toyota%20Innova%20Hycross)*%20for%20my%20trip.%20Please%20share%20the%20availability%20and%20fare%20details." target="_blank">
+Book Innova
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+  <section id="contact" style="background: var(--bg); padding-top: 0;">
+    <div class="journey-cta">
+      <h2>Plan Your Journey With Kumaran Elite Travels</h2>
+      <p style="font-size: 18px; color: var(--white-70); margin-bottom: 16px;">Call or WhatsApp us to book your ride instantly.</p>
+      <div class="phone-number">+91 89402 62025</div>
+      <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+        <a href="tel:+918940262025" class="btn-primary"><i class="fas fa-phone"></i> Call Now</a>
+        <a href="https://wa.me/918940262025?text=Hi%20Kumaran%20Elite%20Travels%2C%20I%20need%20to%20book%20a%20taxi%20from%20Trichy." target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+      </div>
+    </div>
+  </section>
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <img src="assets/kumaran_logo.png" alt="Kumaran Elite Travels" height="170" width="170"  loading="lazy">
+        <div class="footer-logo-text"><div class="brand">Kumaran Elite Travels</div><div class="sub">Premium Travel, Trichy</div></div>
+      </div>
+      <p class="footer-desc">Trichy's most trusted taxi and travel partner. Committed to premium, safe journeys since 2023.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#destinations">Destinations</a></li>
+        <li><a href="#">Our Fleet</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="index.html#services">Airport Transfers</a></li>
+        <li><a href="index.html#services">One Way Taxi</a></li>
+        <li><a href="index.html#services">Outstation Trips</a></li>
+        <li><a href="index.html#services">Temple Tours</a></li>
+        <li><a href="index.html#services">Tour Packages</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+        <h4>Contact Us</h4>
+        <div class="contact-item"><span class="contact-icon"><i class="fas fa-phone"></i></span><span class="contact-text"><a href="tel:+918940262025" style="color:inherit;">+91 89402 62025</a></span></div>
+        <div class="contact-item"><span class="contact-icon"><i class="fas fa-phone"></i></span><span class="contact-text"><a href="tel:+916369372123" style="color:inherit;">+91 63693 72123</a></span></div>
+        <div class="contact-item"><span class="contact-icon"><i class="fas fa-message"></i></span><span class="contact-text">kumaran3484@gmail.com</span></div>
+        <div class="contact-item"><span class="contact-icon"><i class="fas fa-location-arrow"></i></span><span class="contact-text">86/3, 3rd Floor<br> GP Raja Tower, Madurai Road<br> Tiruchirappalli, Tamil Nadu, India - 620008</span></div>
+      </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">©<span id="year"></span> <span>Kumaran Elite Travels</span>. All rights reserved. Made with ❤️ in Trichy.</div>
+  </div>
+</footer>
+
+
+<div class="floating-contact">
+ <button id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/918940262025?text=Hi%20Kumaran%20Elite%20Travels,%20I%20need%20a%20taxi%20from%20Trichy."
+     target="_blank"
+     class="float-btn whatsapp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Call -->
+  <a href="tel:+918940262025"
+     class="float-btn call">
+    <i class="fas fa-phone"></i>
+  </a>
+  
+   
+
+</div>
+
+</body>
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+   const backToTopBtn = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 400) {
+      backToTopBtn.classList.add("show");
+    } else {
+      backToTopBtn.classList.remove("show");
+    }
+
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
+  });
+  (function() {
+    const navbar = document.getElementById('navbar');
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeMenuBtn = document.getElementById('closeMenu');
+    window.addEventListener('scroll', function() { navbar.classList.toggle('scrolled', window.scrollY > 60); });
+    window.closeMobileMenu = function() { mobileMenu.classList.remove('open'); };
+    hamburger.addEventListener('click', function() { mobileMenu.classList.toggle('open'); });
+    closeMenuBtn.addEventListener('click', function() { mobileMenu.classList.remove('open'); });
+
+  })();
+</script>
+</html>
