@@ -176,53 +176,61 @@
 <main>
 <!-- ===== 3. HERO SECTION ===== -->
 <section class="home-hero" id="home">
-  <div class="hero-carousel" id="heroCarousel">
-    <div class="hero-slide active">
-      <img src="assets/hero_bg_1.jpg" alt="Scenic Tamil Nadu tea plantations and Toyota Innova on the road" loading="eager">
-    </div>
-    <div class="hero-slide">
-      <img src="assets/hero_bg_2.jpg" alt="Ancient temple at sunset near the ocean in Tamil Nadu" loading="lazy">
-    </div>
-    <div class="hero-slide">
-      <img src="assets/hero_bg_3.jpg" alt="Beautiful waterfall and tropical forest in Tamil Nadu" loading="lazy">
-    </div>
-  </div>
-  <div class="hero-overlay"></div>
-
-  <!-- Certified by Ministry of Tourism Badge -->
-  <div class="hero-badge">
-    <div class="hero-badge-icon">
-      <!-- Ashoka Emblem SVG -->
-      <svg viewBox="0 0 40 48" width="22" height="28" fill="#171717">
-        <path d="M20 2C16.5 2 13.5 3.8 11.5 5.8c-.8 1-.8 2.5-.8 4.2 0 2.5 1.7 4.5 3.5 5.5-1.8 1-2.8 2.8-2.8 5.2 0 1.8.8 3.5 1.8 4.5-.8.8-1.5 1.8-1.5 3.5 0 1.8.8 3.5 2.5 4.5v1.8h11.5V33c1.7-1 2.5-2.7 2.5-4.5 0-1.7-.7-2.7-1.5-3.5 1-1 1.8-2.7 1.8-4.5 0-2.4-1-4.2-2.8-5.2 1.8-1 3.5-3 3.5-5.5 0-1.7 0-3.2-.8-4.2-2-2-5-3.8-8.5-3.8zm-6 30h12v1.5H14V32zm1.8 2.5h8.5v1.5h-8.5v-1.5z"/>
-      </svg>
-    </div>
-    <div class="hero-badge-text">
-      <div>Certified by</div>
-      <strong>Ministry of Tourism</strong>
-      <div>Government of India</div>
-    </div>
-  </div>
-
-  <div class="hero-content">
-    <div class="hero-text">
-      <div class="eyebrow">EXPLORE TAMIL NADU & BEYOND</div>
-      <h1>Travel in Comfort with<br><span class="gold">Kumaran Elite Travels</span></h1>
-      <p>Reliable taxi service, curated tour packages and memorable travel experiences for families, groups and corporates.</p>
-      <div class="hero-btns">
-        <a href="book.html" class="btn-hero-primary">
-          Plan Your Trip &rarr;
-        </a>
-        <a href="#services" class="btn-hero-secondary">Our Services</a>
+  <div class="hero-media-wrapper">
+    <div class="hero-carousel" id="heroCarousel">
+      <div class="hero-slide active">
+        <img src="assets/hero_bg_1.jpg" alt="Scenic Tamil Nadu tea plantations and Toyota Innova on the road" loading="eager">
+      </div>
+      <div class="hero-slide">
+        <img src="assets/hero_bg_2.jpg" alt="Ancient temple at sunset near the ocean in Tamil Nadu" loading="lazy">
+      </div>
+      <div class="hero-slide">
+        <img src="assets/hero_bg_3.jpg" alt="Beautiful waterfall and tropical forest in Tamil Nadu" loading="lazy">
       </div>
     </div>
+    <div class="hero-overlay"></div>
+
+    <!-- Certified by Ministry of Tourism Badge -->
+    <div class="hero-badge">
+      <div class="hero-badge-icon">
+        <!-- Ashoka Emblem SVG -->
+        <svg viewBox="0 0 40 48" width="22" height="28" fill="#171717">
+          <path d="M20 2C16.5 2 13.5 3.8 11.5 5.8c-.8 1-.8 2.5-.8 4.2 0 2.5 1.7 4.5 3.5 5.5-1.8 1-2.8 2.8-2.8 5.2 0 1.8.8 3.5 1.8 4.5-.8.8-1.5 1.8-1.5 3.5 0 1.8.8 3.5 2.5 4.5v1.8h11.5V33c1.7-1 2.5-2.7 2.5-4.5 0-1.7-.7-2.7-1.5-3.5 1-1 1.8-2.7 1.8-4.5 0-2.4-1-4.2-2.8-5.2 1.8-1 3.5-3 3.5-5.5 0-1.7 0-3.2-.8-4.2-2-2-5-3.8-8.5-3.8zm-6 30h12v1.5H14V32zm1.8 2.5h8.5v1.5h-8.5v-1.5z"/>
+        </svg>
+      </div>
+      <div class="hero-badge-text">
+        <div>Certified by</div>
+        <strong>Ministry of Tourism</strong>
+        <div>Government of India</div>
+      </div>
+    </div>
+
+    <!-- Carousel dots -->
+    <div class="hero-dots" id="heroDots">
+      <span class="active" data-slide="0"></span>
+      <span data-slide="1"></span>
+      <span data-slide="2"></span>
+    </div>
   </div>
 
-  <!-- Carousel dots -->
-  <div class="hero-dots" id="heroDots">
-    <span class="active" data-slide="0"></span>
-    <span data-slide="1"></span>
-    <span data-slide="2"></span>
+  <!-- Hero Content Bar below slideshow matching reference layout -->
+  <div class="hero-bar">
+    <div class="hero-bar-container">
+      <div class="hero-bar-desc">
+        <p>Reliable taxi service, curated tour packages and memorable travel experiences for families, groups and corporates.</p>
+      </div>
+      <div class="hero-bar-title">
+        <h1>Travel in Comfort with<br><span class="gold">Kumaran Elite Travels</span></h1>
+      </div>
+      <div class="hero-bar-action">
+        <div class="hero-btns">
+          <a href="book.html" class="btn-hero-primary">
+            Plan Your Trip &rarr;
+          </a>
+          <a href="#services" class="btn-hero-secondary">Our Services</a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -230,7 +238,6 @@
 <section class="home-section" id="destinations">
   <div class="section-header-row">
     <div>
-      <div class="section-eyebrow">EXPLORE TOP DESTINATIONS</div>
       <h2 class="section-heading">Explore Top Destinations</h2>
     </div>
     <a href="#destinations" class="view-all-link">View All Destinations →</a>
@@ -287,7 +294,6 @@
   <div class="home-section">
     <div class="section-header-row">
       <div>
-        <div class="section-eyebrow">OUR VEHICLE FLEET</div>
         <h2 class="section-heading">Travel With a Comfortable Fleet</h2>
       </div>
       <a href="vehicle.html" class="view-all-link">View All Vehicles →</a>
@@ -295,22 +301,30 @@
 
     <div class="fleet-grid-new">
       <div class="fleet-item">
-        <img src="assets/sedan-car-model.png" alt="Sedan taxi for Trichy travel" loading="lazy">
+        <div class="fleet-item-img">
+          <img src="assets/sedan.jpg" alt="Sedan taxi for Trichy travel" loading="lazy">
+        </div>
         <h4>Sedan</h4>
         <span>4 Seater</span>
       </div>
       <div class="fleet-item">
-        <img src="assets/suv.png" alt="SUV vehicle for family trips" loading="lazy">
+        <div class="fleet-item-img">
+          <img src="assets/xuv.png" alt="SUV vehicle for family trips" loading="lazy">
+        </div>
         <h4>SUV</h4>
         <span>7 Seater</span>
       </div>
       <div class="fleet-item">
-        <img src="assets/hycross.png" alt="Innova Crysta premium vehicle" loading="lazy">
+        <div class="fleet-item-img">
+          <img src="assets/hycross.png" alt="Innova Crysta premium vehicle" loading="lazy">
+        </div>
         <h4>Innova</h4>
         <span>7/8 Seater</span>
       </div>
       <div class="fleet-item">
-        <img src="assets/van.png" alt="Tempo Traveller for group tours" loading="lazy">
+        <div class="fleet-item-img">
+          <img src="assets/tempo_traveller.png" alt="Tempo Traveller for group tours" loading="lazy">
+        </div>
         <h4>Tempo Traveller</h4>
         <span>12 Seater</span>
       </div>
@@ -322,7 +336,6 @@
 <section class="home-section" id="packages">
   <div class="section-header-row">
     <div>
-      <div class="section-eyebrow">TRAVEL PACKAGES</div>
       <h2 class="section-heading">Curated Travel Packages</h2>
     </div>
     <a href="package.html" class="view-all-link">View All Packages →</a>
@@ -330,44 +343,68 @@
 
   <div class="pkg-grid">
     <a href="package.html" class="pkg-card">
-      <div class="pkg-card-img"><img src="assets/ooty.jpg" alt="Ooty Getaway tour package" loading="lazy"></div>
-      <h4>Ooty Getaway</h4>
-      <span>2 Days / 1 Night</span>
+      <img src="assets/ooty.jpg" alt="Ooty Getaway tour package" loading="lazy">
+      <div class="pkg-overlay"></div>
+      <div class="pkg-info">
+        <h4>Ooty Getaway</h4>
+        <span>2 Days / 1 Night</span>
+      </div>
     </a>
     <a href="package.html" class="pkg-card">
-      <div class="pkg-card-img"><img src="assets/kodaikanal.jpg" alt="Kodaikanal Escape tour package" loading="lazy"></div>
-      <h4>Kodaikanal Escape</h4>
-      <span>2 Days / 1 Night</span>
+      <img src="assets/kodaikanal.jpg" alt="Kodaikanal Escape tour package" loading="lazy">
+      <div class="pkg-overlay"></div>
+      <div class="pkg-info">
+        <h4>Kodaikanal Escape</h4>
+        <span>2 Days / 1 Night</span>
+      </div>
     </a>
     <a href="package.html" class="pkg-card">
-      <div class="pkg-card-img"><img src="assets/munnar.jpg" alt="Munnar Retreat tour package" loading="lazy"></div>
-      <h4>Munnar Retreat</h4>
-      <span>3 Days / 2 Nights</span>
+      <img src="assets/munnar.jpg" alt="Munnar Retreat tour package" loading="lazy">
+      <div class="pkg-overlay"></div>
+      <div class="pkg-info">
+        <h4>Munnar Retreat</h4>
+        <span>3 Days / 2 Nights</span>
+      </div>
     </a>
     <a href="package.html" class="pkg-card">
-      <div class="pkg-card-img"><img src="assets/rameswaram.jpg" alt="Rameswaram Darshan tour package" loading="lazy"></div>
-      <h4>Rameswaram Darshan</h4>
-      <span>2 Days / 1 Night</span>
+      <img src="assets/rameswaram.jpg" alt="Rameswaram Darshan tour package" loading="lazy">
+      <div class="pkg-overlay"></div>
+      <div class="pkg-info">
+        <h4>Rameswaram Darshan</h4>
+        <span>2 Days / 1 Night</span>
+      </div>
     </a>
     <a href="package.html" class="pkg-card">
-      <div class="pkg-card-img"><img src="assets/madurai.jpg" alt="Madurai Temple Tour package" loading="lazy"></div>
-      <h4>Madurai Temple Tour</h4>
-      <span>2 Days / 1 Night</span>
+      <img src="assets/madurai.jpg" alt="Madurai Temple Tour package" loading="lazy">
+      <div class="pkg-overlay"></div>
+      <div class="pkg-info">
+        <h4>Madurai Temple Tour</h4>
+        <span>2 Days / 1 Night</span>
+      </div>
     </a>
     <a href="package.html" class="pkg-card">
-      <div class="pkg-card-img"><img src="assets/kanyakumari.jpg" alt="Kanyakumari Tour package" loading="lazy"></div>
-      <h4>Kanyakumari Tour</h4>
-      <span>2 Days / 1 Night</span>
+      <img src="assets/kanyakumari.jpg" alt="Kanyakumari Tour package" loading="lazy">
+      <div class="pkg-overlay"></div>
+      <div class="pkg-info">
+        <h4>Kanyakumari Tour</h4>
+        <span>2 Days / 1 Night</span>
+      </div>
     </a>
     <a href="package.html" class="pkg-card">
-      <div class="pkg-card-img"><img src="assets/nilgiri.jpg" alt="Nilgiri Explorer tour package" loading="lazy"></div>
-      <h4>Nilgiri Explorer</h4>
-      <span>4 Days / 3 Nights</span>
+      <img src="assets/nilgiri.jpg" alt="Nilgiri Explorer tour package" loading="lazy">
+      <div class="pkg-overlay"></div>
+      <div class="pkg-info">
+        <h4>Nilgiri Explorer</h4>
+        <span>4 Days / 3 Nights</span>
+      </div>
     </a>
     <a href="package.html" class="pkg-card">
-      <div class="pkg-card-img"><img src="assets/heritage.jpg" alt="Tamil Nadu Heritage tour package" loading="lazy"></div>
-      <h4>Tamil Nadu Heritage</h4>
-      <span>4 Days / 3 Nights</span>
+      <img src="assets/heritage.jpg" alt="Tamil Nadu Heritage tour package" loading="lazy">
+      <div class="pkg-overlay"></div>
+      <div class="pkg-info">
+        <h4>Tamil Nadu Heritage</h4>
+        <span>4 Days / 3 Nights</span>
+      </div>
     </a>
   </div>
 </section>
@@ -375,8 +412,6 @@
 <!-- ===== 7. CUSTOMER REVIEWS ===== -->
 <section class="reviews-section" id="reviews">
   <div class="reviews-container">
-    <div class="section-eyebrow">CUSTOMER REVIEWS</div>
-
     <div class="reviews-layout">
       <div class="review-left">
         <h2>What Our Customers Say</h2>
