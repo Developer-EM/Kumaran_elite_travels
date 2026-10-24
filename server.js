@@ -2,7 +2,7 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
-const PORT = 3000;
+let PORT = parseInt(process.env.PORT, 10) || 3000;
 const MIME = {
   '.html': 'text/html; charset=utf-8',
   '.css': 'text/css; charset=utf-8',
@@ -36,6 +36,18 @@ const server = http.createServer((req, res) => {
   });
 });
 
-server.listen(PORT, () => {
+server.on('listening', () => {
   console.log(`Kumaran Elite Travels server running at http://localhost:${PORT}/`);
 });
+
+server.on('error', (err) => {
+  if (err.code === 'EADDRINUSE') {
+    console.log(`Port ${PORT} is in use, trying http://localhost:${PORT + 1}/...`);
+    PORT++;
+    server.listen(PORT);
+  } else {
+    console.error('Server error:', err);
+  }
+});
+
+server.listen(PORT);
