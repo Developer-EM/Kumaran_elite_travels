@@ -2930,29 +2930,87 @@ body.home-page #backToTop {
   text-decoration: none !important;
 }
 
-/* 3. Hero Section (Single Static Image, Crisp White & Black) */
+/* 3. Hero Section (Full-Width Slideshow Background, Crisp Black & White Theme) */
 .home-hero {
-  background: #ffffff !important;
-  padding: 36px 5% 52px !important;
-  min-height: auto !important;
+  position: relative !important;
+  background: #111111 !important;
+  padding: 0 !important;
+  min-height: 600px !important;
+  display: flex !important;
+  align-items: center !important;
+  overflow: hidden !important;
+  width: 100% !important;
+}
+
+.home-hero .hero-bg-wrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
   overflow: hidden;
 }
 
+.home-hero .hero-carousel {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.home-hero .hero-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+  will-change: opacity;
+}
+
+.home-hero .hero-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.home-hero .hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  display: block;
+}
+
+/* Localized gradient overlay: text is 100% readable on the left, photograph is vibrantly visible across the hero */
+.home-hero .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(255, 255, 255, 0.88) 32%,
+    rgba(255, 255, 255, 0.45) 56%,
+    rgba(255, 255, 255, 0.03) 92%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
 .home-hero .hero-container {
+  position: relative !important;
+  z-index: 2 !important;
   max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
-  display: grid !important;
-  grid-template-columns: 1.05fr 1fr !important;
-  gap: 48px !important;
-  align-items: center;
-  padding: 0 !important;
+  display: block !important;
+  padding: 68px 5% !important;
 }
 
 .home-hero .hero-content-col {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  max-width: 100%;
+  max-width: 600px;
 }
 
 .home-hero .hero-cert {
@@ -2961,11 +3019,13 @@ body.home-page #backToTop {
   display: inline-flex !important;
   align-items: center;
   gap: 12px;
-  background: #fafafa;
-  border: 1px solid #e4e4e7;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   padding: 8px 14px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
 }
 
 .home-hero .hero-eyebrow {
@@ -2999,11 +3059,12 @@ body.home-page #backToTop {
 }
 
 .home-hero .hero-desc {
-  font-size: 15px;
-  color: #4b5563 !important;
+  font-size: 15.5px;
+  color: #27272a !important;
   line-height: 1.7;
   margin-bottom: 28px;
   max-width: 520px;
+  font-weight: 500;
 }
 
 .home-hero .hero-actions {
@@ -3024,6 +3085,9 @@ body.home-page #backToTop {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
   border: 1.5px solid #000000;
   transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .home-hero .btn-hero-primary:hover {
@@ -3034,7 +3098,9 @@ body.home-page #backToTop {
 }
 
 .home-hero .btn-hero-secondary {
-  background: transparent !important;
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   color: #000000 !important;
   padding: 12px 28px;
   border-radius: 999px;
@@ -3043,33 +3109,15 @@ body.home-page #backToTop {
   border: 1.5px solid #000000 !important;
   text-decoration: none !important;
   transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .home-hero .btn-hero-secondary:hover {
   background: #000000 !important;
   color: #ffffff !important;
   transform: translateY(-2px);
-}
-
-.home-hero .hero-image-col {
-  width: 100%;
-}
-
-.home-hero .hero-static-frame {
-  width: 100%;
-  aspect-ratio: 4/3;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
-  background: #f4f4f5;
-  border: 1px solid #e4e4e7;
-}
-
-.home-hero .hero-static-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
 }
 
 /* 4. Sticky Floating WhatsApp Side Tab (Clean Black & White) */
@@ -3327,16 +3375,59 @@ body.home-page #backToTop {
 
 /* 8. Responsive Adjustments */
 @media (max-width: 900px) {
-  .home-hero .hero-container {
-    grid-template-columns: 1fr !important;
-    gap: 32px !important;
+  .home-hero {
+    min-height: 560px !important;
   }
-  .home-hero .hero-static-frame {
-    aspect-ratio: 16/10;
+  .home-hero .hero-container {
+    padding: 56px 5% !important;
+  }
+  .home-hero .hero-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.96) 0%,
+      rgba(255, 255, 255, 0.90) 45%,
+      rgba(255, 255, 255, 0.6) 72%,
+      rgba(255, 255, 255, 0.12) 100%
+    );
   }
   .about-inner {
     grid-template-columns: 1fr !important;
     gap: 36px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-hero {
+    min-height: 500px !important;
+  }
+  .home-hero .hero-container {
+    padding: 40px 5% 44px !important;
+  }
+  .home-hero .hero-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.96) 0%,
+      rgba(255, 255, 255, 0.90) 65%,
+      rgba(255, 255, 255, 0.52) 88%,
+      rgba(255, 255, 255, 0.15) 100%
+    );
+  }
+  .home-hero .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 10px;
+  }
+  .home-hero .btn-hero-primary,
+  .home-hero .btn-hero-secondary {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-hero .hero-slide {
+    transition: none !important;
   }
 }
 
